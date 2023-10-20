@@ -1,2 +1,2 @@
 # Nobara-Mint
-Custom post-install scripts for Nobara
+(Usually personal) Custom post-install scripts for Nobara
