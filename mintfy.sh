@@ -5,10 +5,20 @@ sudo dnf install cinnamon-themes breeze-cursor-theme breeze-icon-theme gnome-she
 gnome-extensions disable blur-my-shell@aunetx
 
 #enable convnient extentions
-gnome-extensions enable supergfxctl-gex@asus-linux.org
+#gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+gnome-extensions enable arcmenu@arcmenu.com
+#gnome-extensions enable clipboard-history@alexsaveau.dev
+#gnome-extensions enable custom-accent-colors@demiskp
+#gnome-extensions enable dash-to-panel@jderose9.github.com
+#gnome-extensions enable ding@rastersoft.com
 gnome-extensions enable gamemode@christian.kellner.me
 gnome-extensions enable gestureImprovements@gestures
 gnome-extensions enable just-perfection-desktop@just-perfection
+#gnome-extensions enable pop-shell@system76.com
+#gnome-extensions enable quick-settings-tweaks@qwreey
+gnome-extensions enable supergfxctl-gex@asus-linux.org
+#gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+#gnome-extensions enable wireless-hid@chlumskyvaclav.gmail.com
 
 #Set some convinient variables
 gsettings set org.gnome.desktop.interface gtk-theme 'Mint-Y-Dark-Aqua' 
@@ -35,8 +45,8 @@ gsettings set org.gnome.shell.extensions.arcmenu extra-categories [(0, false), (
 #gnome-extensions prefs dash-to-panel@jderose9.github.com
 gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant true
 gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'SEGMENTED'
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'DASHES'
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'CILIORA'
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'METRO'
 gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant false
 gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity false
 gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
@@ -52,6 +62,18 @@ gsettings set org.gnome.shell.extensions.just-perfection activities-button false
 gsettings set org.gnome.shell.extensions.just-perfection startup-status 0
 gsettings set org.gnome.shell.extensions.just-perfection show-apps-button false
 
-#Visit https://github.com/ful1e5/Bibata_Cursor in order to download the latest stable
+#keybidings variables
+#Window navegation
+#gsettings set org.gnome.desktop.wm.keybindings switch-applications []
+#gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward []
+#gsettings set org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
+#gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward ['<Shift><Alt>Tab']
+#Launcher
+#gsettings set org.gnome.settings-daemon.plugins.media-keys email []
+#gsettings set org.gnome.settings-daemon.plugins.media-keys home ['<Super>e']
 
-#Should we use an alternative repo?
+#Visit https://github.com/ful1e5/Bibata_Cursor in order to download the latest stable
+#Visit https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip in order to download LMUE's dafult font... if anyone want the portal page: https://design.ubuntu.com/font/
+
+#Should we use an alternative repo? Like RPM Sphere?
+#RPM Sphere may provide Ubuntu Fonts and PeaZip (in order to replace File Roller
