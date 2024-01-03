@@ -1,3 +1,6 @@
+#Installing extentions? (From N39 onwards)
+#sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-arc-menu gnome-shell-extension-clipboard-history gnome-shell-extension-custom-accent-colors gnome-shell-extension-dash-to-panel gnome-shell-extension-gamemode gnome-shell-extension-gesture-improvements gnome-shell-extension-just-perfection gnome-shell-extension-pop-shell gnome-shell-extension-supergfxctl-gex gnome-shell-extension-user-theme gnome-shell-extension-wireless-hid gnome-shell-extension-quick-settings-tweaker gnome-shell-extension-desktop-icons
+
 #Installing main themes
 sudo dnf install cinnamon-themes breeze-cursor-theme breeze-icon-theme gnome-shell-theme-yaru papirus-icon-theme
 
