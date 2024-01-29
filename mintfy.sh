@@ -1,7 +1,7 @@
 #Remember, you can open your terminal and execute the un-commented lines as you wish, be careful to read!
 
 #Installing extentions? (Based on Nobara 39)
-#sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-gamemode gnome-shell-extension-just-perfection gnome-shell-extension-supergfxctl-gex gnome-shell-extension-user-theme gnome-shell-extension-pop-shell
+sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-gamemode gnome-shell-extension-just-perfection gnome-shell-extension-supergfxctl-gex gnome-shell-extension-user-theme gnome-shell-extension-pop-shell
 
 #The rest of the extensions need this extra guide:
 #https://docs.fedoraproject.org/en-US/quick-docs/gnome-shell-extensions/
@@ -50,6 +50,8 @@ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
 gsettings set org.gnome.nautilus.preferences show-delete-permanently true
+
+gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 
 #Tune-up convinient extentions
 #gnome-extensions prefs arcmenu@arcmenu.com
