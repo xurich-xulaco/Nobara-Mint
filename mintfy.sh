@@ -40,20 +40,27 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Mint-Y-Dark-Aqua'
 gsettings set org.gnome.desktop.interface icon-theme 'Mint-Y-Sand'
 
 #Get some of mint's apps
-sudo dnf remove evince* gnome-maps totem gnome-contacts
+sudo dnf remove evince* gnome-maps totem gnome-contacts gnome-connections
 sudo dnf install xreader xreader-thumbnailer thunderbird hexchat transmission-gtk seahorse seahorse-nautilus celluloid pidgin drawing
 
+#Sane settings for xreader
 gsettings set org.x.reader.default continuous true
 gsettings set org.x.reader.toolbar show-zoom-action true
 
+#Sane settings for nautilus (file manager)
 gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
 gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 
+#Enable easy to acces accesibility menu, for the users that need screen-keyboard
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+
 #Tune-up convinient extentions
+#gnome-extensions prefs appindicatorsupport@rgcjonas.gmail.com
+gsettings set org.gnome.shell.extensions.appindicator legacy-tray-enabled false
 #gnome-extensions prefs arcmenu@arcmenu.com
 #gsettings set org.gnome.shell.extensions.arcmenu category-icon-type 'Full_Color'
 #gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Mint'
