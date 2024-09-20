@@ -1,37 +1,33 @@
 #Remember, you can open your terminal and execute the un-commented lines as you wish, be careful to read!
 
-#Installing extentions? (Based on Nobara 39)
-sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-gamemode gnome-shell-extension-just-perfection gnome-shell-extension-supergfxctl-gex gnome-shell-extension-user-theme gnome-shell-extension-pop-shell
+#Installing extentions? (Based on Nobara 40)
+sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-just-perfection gnome-shell-extension-user-theme gnome-shell-extension-gpaste gnome-shell-extension-pop-shell gnome-shell-extension-pop-shell-shortcut-overrides
 
 #The rest of the extensions need this extra guide:
 #https://docs.fedoraproject.org/en-US/quick-docs/gnome-shell-extensions/
 #Links to the rest of the extensions:
 #https://extensions.gnome.org/extension/3628/arcmenu/
-#https://extensions.gnome.org/extension/4839/clipboard-history/
 #https://extensions.gnome.org/extension/5547/custom-accent-colors/
 #https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/
 #https://extensions.gnome.org/extension/5446/quick-settings-tweaker/
 #https://extensions.gnome.org/extension/4228/wireless-hid/
 
 #Installing main themes
-sudo dnf install cinnamon-themes breeze-cursor-theme breeze-icon-theme gnome-shell-theme-yaru papirus-icon-theme
-
-#disable unnecesary extentions (OUTDATED)
-#gnome-extensions disable blur-my-shell@aunetx
+sudo dnf install cinnamon-themes gnome-shell-theme-yaru papirus-icon-theme
 
 #enable convnient extentions (OR USE GNOME-EXTENSIONS ADD-ON ON YOUR BROWSER)
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable arcmenu@arcmenu.com
-gnome-extensions enable clipboard-history@alexsaveau.dev
 gnome-extensions enable custom-accent-colors@demiskp
 gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable ding@rastersoft.com
-gnome-extensions enable gamemode@christian.kellner.me
+#gnome-extensions enable gamemode@christian.kellner.me
 #gnome-extensions enable gestureImprovements@gestures
+gnome-extensions enable GPaste@gnome-shell-extensions.gnome.org
 gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable pop-shell@system76.com
 gnome-extensions enable quick-settings-tweaks@qwreey
-gnome-extensions enable supergfxctl-gex@asus-linux.org
+#gnome-extensions enable supergfxctl-gex@asus-linux.org
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable wireless-hid@chlumskyvaclav.gmail.com
 
@@ -41,14 +37,10 @@ gsettings set org.gnome.desktop.interface icon-theme 'Mint-Y-Sand'
 
 #Get some of mint's apps
 sudo dnf remove evince* gnome-maps totem gnome-contacts gnome-connections
-sudo dnf install xreader xreader-thumbnailer thunderbird hexchat transmission-gtk seahorse seahorse-nautilus celluloid pidgin drawing
+sudo dnf install xreader xreader-thumbnailer thunderbird transmission-gtk seahorse celluloid drawing rhythmbox
 
-#Sane settings for xreader
-gsettings set org.x.reader.default continuous true
-gsettings set org.x.reader.toolbar show-zoom-action true
-
-#Sane settings for nautilus (file manager)
-gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
+#Turning Nautilus into Nemo-like-configuration
+gsettings set org.gnome.nautilus.preferences default-sort-order 'name'
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
 gsettings set org.gnome.nautilus.preferences show-delete-permanently true
@@ -56,6 +48,7 @@ gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 #Enable easy to acces accesibility menu, for the users that need screen-keyboard
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 
+#Hot corners are default disabled on Linux Mint
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 
 #Tune-up convinient extentions
@@ -76,9 +69,6 @@ gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant 
 gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity false
 gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
 gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#2e2e2e'
-#gnome-extensions prefs gestureImprovements@gestures
-#gsettings set org.gnome.shell.extensions.gestureImprovements enable-alttab-gesture false
-#gsettings set org.gnome.shell.extensions.gestureImprovements enable-window-manipulation-gesture false
 #gnome-extensions prefs just-perfection-desktop@just-perfection
 gsettings set org.gnome.shell.extensions.just-perfection notification-banner-position 2
 gsettings set org.gnome.shell.extensions.just-perfection osd-position 5
