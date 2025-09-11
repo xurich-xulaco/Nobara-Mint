@@ -1,31 +1,32 @@
 #Remember, you can open your terminal and execute the un-commented lines as you wish, be careful to read!
 
 #Installing extentions? (Based on Nobara 40)
-sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel gnome-shell-extension-just-perfection gnome-shell-extension-user-theme gnome-shell-extension-gpaste gnome-shell-extension-pop-shell gnome-shell-extension-pop-shell-shortcut-overrides
+sudo dnf install gnome-shell-extension-status-icons gnome-shell-extension-openweather gnome-shell-extension-just-perfection gnome-shell-extension-user-theme gnome-shell-extension-gpaste
 
 #The rest of the extensions need this extra guide:
 #https://docs.fedoraproject.org/en-US/quick-docs/gnome-shell-extensions/
 #Links to the rest of the extensions:
 #https://extensions.gnome.org/extension/3628/arcmenu/
-#https://extensions.gnome.org/extension/5547/custom-accent-colors/
+#https://extensions.gnome.org/extension/7855/dash-in-panel/
 #https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/
+#https://extensions.gnome.org/extension/8544/fuzzy-application-search/
+#https://extensions.gnome.org/extension/3733/tiling-assistant/
 #https://extensions.gnome.org/extension/5446/quick-settings-tweaker/
 #https://extensions.gnome.org/extension/4228/wireless-hid/
+#??https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome/
 
 #Installing main themes
 sudo dnf install cinnamon-themes gnome-shell-theme-yaru papirus-icon-theme
 
 #enable convnient extentions (OR USE GNOME-EXTENSIONS ADD-ON ON YOUR BROWSER)
-gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+gnome-extensions enable status-icons@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable arcmenu@arcmenu.com
-gnome-extensions enable custom-accent-colors@demiskp
-gnome-extensions enable dash-to-panel@jderose9.github.com
+gnome-extensions enable dash-in-panel@fthx
 gnome-extensions enable ding@rastersoft.com
 #gnome-extensions enable gamemode@christian.kellner.me
-#gnome-extensions enable gestureImprovements@gestures
 gnome-extensions enable GPaste@gnome-shell-extensions.gnome.org
 gnome-extensions enable just-perfection-desktop@just-perfection
-gnome-extensions enable pop-shell@system76.com
+gnome-extensions enable wintile@nowsci.com
 gnome-extensions enable quick-settings-tweaks@qwreey
 #gnome-extensions enable supergfxctl-gex@asus-linux.org
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
@@ -53,7 +54,7 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 
 #Tune-up convinient extentions
 #gnome-extensions prefs appindicatorsupport@rgcjonas.gmail.com
-gsettings set org.gnome.shell.extensions.appindicator legacy-tray-enabled false
+#gsettings set org.gnome.shell.extensions.appindicator legacy-tray-enabled false
 #gnome-extensions prefs arcmenu@arcmenu.com
 #gsettings set org.gnome.shell.extensions.arcmenu category-icon-type 'Full_Color'
 #gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Mint'
@@ -61,14 +62,14 @@ gsettings set org.gnome.shell.extensions.appindicator legacy-tray-enabled false
 #gsettings set org.gnome.shell.extensions.arcmenu shortcut-icon-type 'Full_Color'
 #gsettings set org.gnome.shell.extensions.arcmenu extra-categories "[(0, false), (1, false), (2, true), (3, false), (4, true)]"
 #gnome-extensions prefs dash-to-panel@jderose9.github.com
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant true
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'CILIORA'
-gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'METRO'
-gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant false
-gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity false
-gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
-gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#2e2e2e'
+#gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant true
+#gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
+#gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'CILIORA'
+#gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'METRO'
+#gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant false
+#gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity false
+#gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
+#gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#2e2e2e'
 #gnome-extensions prefs just-perfection-desktop@just-perfection
 gsettings set org.gnome.shell.extensions.just-perfection notification-banner-position 2
 gsettings set org.gnome.shell.extensions.just-perfection osd-position 5
@@ -92,3 +93,4 @@ gsettings set org.gnome.shell.extensions.just-perfection top-panel-position 0
 
 #Should we use an alternative repo? Like RPM Sphere?
 #RPM Sphere may provide Ubuntu Fonts and PeaZip (in order to replace File Roller
+
